@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+/* Importa as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap');
+
+/* Indica os arquivos que Tailwind deve escanear para gerar as classes utilizadas */
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* Define fontes customizadas como variáveis CSS */
+@theme {
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --font-heading: 'Bebas Neue', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Adiciona classe utilitária customizada para título */
+@layer utilities {
+    .font-heading {
+        font-family: var(--font-heading);
+    }
+}
