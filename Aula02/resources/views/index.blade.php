@@ -17,123 +17,119 @@
     </head>
   <body>
     <!--- header ----->  
-    <div class="bg-[#171717] h-20 flex items-center pl-5">
-        <img src="{{ asset('build/assets/images/home/cpLogo.png') }}" alt="logo" class="w-16 h-16">
+    <div class="bg-[#2c58d1] h-20 flex items-center pl-5">
+        <img src="{{ asset('build/assets/images/icone.png') }}" alt="logo" class="w-16 h-16">
     </div>
 
-    <!--- banner com overlay sólido e texto ---->
+    <!--- banner---->
     <div class="relative">
         <!-- imagem do banner -->
-        <img src="{{ asset('build/assets/images/home/banner.jpg') }}" alt="banner" class="w-full h-[400px] object-cover">
+        <img src="{{ asset('build/assets/images/banner.jpg') }}" 
+             alt="banner" 
+             class="w-full h-[500px] sm:h-[400px] object-cover">
 
-        <!-- overlay cinza transparente -->
-        <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+        <!-- overlay do banner-->
+        <div class="absolute inset-0 bg-black/70 flex items-center justify-center">
             <h1 class="text-white text-5xl font-bold">Paulistão</h1>
         </div>
     </div>
 
     <!--- seção texto explicativo ---->
-
-        <div>
+    <div>
         <h2 class="font-heading text-5xl font-bold text-center">Paulistão: A maior tradição do futebol paulista</h2>
-        </div>
-        <div class ="m-9">
+    </div>
+    <div class="m-9">
         <p class="text-lg leading-relaxed">
             O Paulistão, oficialmente conhecido como Campeonato Paulista de Futebol Profissional, é uma das competições estaduais mais tradicionais e prestigiadas do Brasil. Realizado anualmente desde 1902, reúne os principais clubes do estado de São Paulo em uma disputa intensa que desperta paixões em todo o país. Além de revelar talentos e consolidar grandes estrelas do futebol nacional, o Paulistão é um palco onde clubes históricos como Corinthians, Palmeiras, São Paulo e Santos disputam o título, movimentando milhões de torcedores. O campeonato é marcado por jogos emocionantes, rivalidades centenárias e uma atmosfera vibrante que traduz a essência do futebol paulista. Mais do que uma simples competição, o Paulistão é uma celebração da cultura esportiva paulista, que une tradição, talento e emoção em campo. A cada edição, o torneio reafirma seu papel fundamental no calendário do futebol brasileiro, sendo um dos principais eventos para quem vive e respira o esporte no estado.
         </p>
+    </div>
+
+    <!--- Tabela de Times --->
+    <section class="px-6 py-12 bg-gray-100">
+        <h2 class="text-3xl font-bold font-heading text-center mb-8">Times do Paulistão 2025</h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            @for ($i = 1; $i <= 16; $i++)
+                <div class="flex flex-col items-center">
+                    <img src="{{ asset('build/assets/images/times/time' . $i . '.png') }}" 
+                         alt="Time {{ $i }}" 
+                         class="w-24 h-24 object-contain mb-2">
+                    <span class="text-sm font-medium text-center">Time {{ $i }}</span>
+                </div>
+            @endfor
         </div>
-        <!--- Tabela de Times --->
-        <section class="px-6 py-12 bg-gray-100">
-            <h2 class="text-3xl font-bold font-heading text-center mb-8">Times do Paulistão 2025</h2>
+    </section>
+    <!--- Formulário de votação --->
+<section class="px-6 py-12 bg-white">
+    <h2 class="text-3xl font-bold font-heading text-center mb-8">Vote no Seu Time Favorito do Paulistão 2025</h2>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                <!-- Exemplo de imagem do time -->
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time1.png') }}" alt="Time 1" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 1</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time2.png') }}" alt="Time 2" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 2</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time3.png') }}" alt="Time 3" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 3</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time4.png') }}" alt="Time 4" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 4</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time5.png') }}" alt="Time 5" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 5</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time6.png') }}" alt="Time 6" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 6</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time7.png') }}" alt="Time 7" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 7</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time8.png') }}" alt="Time 8" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 8</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time9.png') }}" alt="Time 9" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 9</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time10.png') }}" alt="Time 10" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 10</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time11.png') }}" alt="Time 11" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 11</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time12.png') }}" alt="Time 12" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 12</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time13.png') }}" alt="Time 13" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 13</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time14.png') }}" alt="Time 14" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 14</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time15.png') }}" alt="Time 15" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 15</span>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('build/assets/images/times/time16.png') }}" alt="Time 16" class="w-24 h-24 object-contain mb-2">
-                    <span class="text-sm font-medium text-center">Time 16</span>
-                </div>
-            </div>
-        </section>
-        <div class="bg-[#171717] h-20 flex items-center justify-center pl-5">
-        <p class = "text-white"> Todos os direitos reservados</p>
-        </div>
-
+    <form id="form-voto" class="max-w-xl mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
         
+        <!-- Nome -->
+        <label for="nome" class="block mb-2 font-semibold">Seu nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome"
+               class="w-full p-2 mb-4 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400" required>
+
+        <!-- Time favorito -->
+        <label for="time" class="block mb-2 font-semibold">Escolha seu time:</label>
+        <select id="time" name="time"
+                class="w-full p-2 mb-4 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400" required>
+            <option value="">Selecione...</option>
+            <option>Corinthians</option>
+            <option>Palmeiras</option>
+            <option>São Paulo</option>
+            <option>Santos</option>
+            <option>Portuguesa</option>
+            <option>Novorizontino</option>
+            <option>Guarani</option>
+            <option>Ponte Preta</option>
+            <option>Inter de Limeira</option>
+            <option>Água Santa</option>
+            <option>Mirassol</option>
+            <option>Bragantino</option>
+            <option>Botafogo-SP</option>
+            <option>Noroeste</option>
+            <option>Velo Clube</option>
+            <option>São Bernardo</option>
+        </select>
+
+        <!-- Comentário -->
+        <label for="comentario" class="block mb-2 font-semibold">Deixe um comentário:</label>
+        <textarea id="comentario" name="comentario" rows="4" placeholder="Escreva sua opinião sobre o Paulistão..."
+                  class="w-full p-2 mb-4 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"></textarea>
+
+        <!-- Lista -->
+        <h3 class="text-lg font-bold mt-6 mb-2">Critérios para votar:</h3>
+        <ul class="list-disc list-inside mb-4 text-gray-700">
+            <li>Escolha apenas um time</li>
+            <li>Não são aceitos votos duplicados</li>
+            <li>Comentários ofensivos serão desconsiderados</li>
+            <li>A votação é apenas para fins de entretenimento</li>
+        </ul>
+
+        <!-- Botão -->
+        <button type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition">
+            Enviar Voto
+        </button>
+
+        <!-- Mensagem de confirmação -->
+        <p id="mensagem" class="text-green-600 font-semibold mt-4 hidden">Recebemos seu voto!</p>
+    </form>
+</section>
+
+<script>
+    document.getElementById('form-voto').addEventListener('submit', function(event) {
+        event.preventDefault(); // impedindo o envio do formulario 
+        document.getElementById('mensagem').classList.remove('hidden'); // mostrar a mensagem de confirmação
+    });
+</script>
+
+
+    <!--- Rodapé --->
+    <div class="bg-[#171717] h-20 flex items-center justify-center pl-5">
+        <p class="text-white">Todos os direitos reservados</p>
+    </div>
 </body>
 
 
